@@ -8,7 +8,7 @@ bot=telebot.TeleBot("250979097:AAFa9NL46DRjgqgZz4XCkHObnDhqLaack3Q")
 def send_welcome(message):
     markup=telebot.types.ReplyKeyboardMarkup(True, False)
     itembtn1 = types.KeyboardButton('/news')
-    itembtn2 = types.KeyboardButton('/plan')
+    itembtn2 = types.KeyboardButton('/расписание')
     itembtn3 = types.KeyboardButton('/cats')
     itembtn4 = types.KeyboardButton(u'/зачет')
     markup.row(itembtn1, itembtn2)
@@ -19,7 +19,7 @@ def send_welcome(message):
 def news(message):
     bot.reply_to(message, 'https://news.yandex.ru/')
 
-@bot.message_handler(commands=['plan'])
+@bot.message_handler(commands=['расписание'])
 def a(message):
     markup=telebot.types.ReplyKeyboardMarkup(True, False)
     bot.reply_to(message, u'Просто учи билеты. Сессия близко. Держи расписание http://ruz.spbstu.ru/faculty/98/groups/21307',reply_markup=markup)
